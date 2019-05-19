@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="com.bc.elmi.pu" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <!-- AttributeConverter -->
+    <class>com.bc.elmi.pu.DateConverterJpa</class>
+    <class>com.bc.elmi.pu.entities.Appointment</class>
+    <class>com.bc.elmi.pu.entities.Course</class>
+    <class>com.bc.elmi.pu.entities.Document</class>
+    <class>com.bc.elmi.pu.entities.Documentaccess</class>
+    <class>com.bc.elmi.pu.entities.Gender</class>
+    <class>com.bc.elmi.pu.entities.Message</class>
+    <class>com.bc.elmi.pu.entities.Messageaccess</class>
+    <class>com.bc.elmi.pu.entities.Messagestatus</class>
+    <class>com.bc.elmi.pu.entities.Messagetype</class>
+    <class>com.bc.elmi.pu.entities.Mimetype</class>
+    <class>com.bc.elmi.pu.entities.Permission</class>
+    <class>com.bc.elmi.pu.entities.Role</class>
+    <class>com.bc.elmi.pu.entities.Test</class>
+    <class>com.bc.elmi.pu.entities.Testdocument</class>
+    <class>com.bc.elmi.pu.entities.Testsetting</class>
+    <class>com.bc.elmi.pu.entities.Unit</class>
+    <class>com.bc.elmi.pu.entities.User</class>
+    <class>com.bc.elmi.pu.entities.Userstatus</class>
+    <properties>
+      <property name="eclipselink.weaving" value="static"/>
+      <property name="eclipselink.connection-pool.default.initial" value="1"/>
+      <property name="eclipselink.connection-pool.default.min" value="64"/>
+      <property name="eclipselink.connection-pool.default.max" value="64"/>
+      <property name="eclipselink.jdbc.cache-statements" value="true"/>
+      <property name="eclipselink.jdbc.batch-writing" value="JDBC"/>
+      <property name="eclipselink.jdbc.batch-writing.size" value="1000"/>
+      <!--property name="eclipselink.logging.level.sql" value="FINE"/-->
+      <!--property name="eclipselink.logging.parameters" value="true"/-->
+    </properties>
+  </persistence-unit>
+</persistence>
